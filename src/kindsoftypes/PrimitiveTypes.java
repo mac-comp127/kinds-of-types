@@ -188,7 +188,7 @@ public class PrimitiveTypes {
         // All these types -- byte, short, int, and long -- are called _primitive types_. Primitive
         // types have several features in common in Java:
         //
-        // - The have a fixed range (and take a fixed amount of memory in the computer).
+        // - The have a fixed range of values (and take a fixed amount of memory in the computer).
         // - You work with them using operators (+ - * / etc).
         // - They allow for very fast computation.
         //
