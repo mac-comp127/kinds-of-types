@@ -12,7 +12,7 @@ public class ObjectTypes {
         //
         // - It's a type.
         // - The type specifies what kinds of values the variable can have.
-        // - We initialize the variable to a specific value of the proper type. ("Coo" is a string.)
+        // - We initialize the variable to a specific value of the proper type.
         //
         // In some ways, however, `String` is very different from `int`. Unlike primitive types,
         // strings do not have a fixed size; some are longer than others. Unlike primitive types,
@@ -46,7 +46,7 @@ public class ObjectTypes {
         // kind -- code like `someFunction(x, y)` -- and method calls are a lot like that, except
         // they use that dot syntax that also gives them a receiver.
         
-        // Here’s what’s interesting methods: they are specific to the _type of the receiver_.
+        // Here’s what’s interesting about methods: they are specific to the _type of the receiver_.
         // For example, try uncommenting this code, and study the error messages you get:
 
         // int notString = 17;
@@ -56,15 +56,15 @@ public class ObjectTypes {
         // You can't ask for the upper case version of 17. Integers don't have a toUpperCase method.
         //
         // Remember our first day activity? We said that this class would be built around saying
-        // “There are things called doors, and they can open” in code. Well, in Java, if you had
-        // a door, here’s how you would tell it to open:
+        // things like “There are things called doors, and they can open” in code. Well, in Java, if
+        // you had a door, here’s how you would tell it to open:
         //
         //     frontDoor.open()
         //
         // A really important thing about doors is that they can open (unlike, say, a chair).
         // Another really important thing about doors is that “open” means something specific for
         // them. A jar can open, too, but “open the jar” describes a different action than “open
-        // the door.” And Java makes it possible for these to lines of code:
+        // the door.” And Java makes it possible for these two lines of code:
         //
         //     frontDoor.open()
         //     jarOfHotSauce.open()
@@ -80,7 +80,9 @@ public class ObjectTypes {
 
         System.out.println("First two letters 100 times: " + mascot.substring(0, 2).repeat(100));
 
-        // In tomorrow’s activity, you’ll be exploring them and learning about some of them.
+        // In tomorrow’s activity, you’ll be exploring them and learning about some of these string
+        // methods. For now, take a moment to get that terminology down: method, call (or invoke),
+        // receiver.
 
 
         System.out.println("────── Primitive Types vs Object Types ──────");
@@ -99,11 +101,11 @@ public class ObjectTypes {
         // always copied        | many variables can point to the same object
         // can’t be null        | can be null
         //
-        // Those last two are big ideas. (Object? Null?) We’ll be studying both of these topics
-        // in depth later. 
+        // Those last two are big ideas. (Object? Point to? Null?) We’ll be studying both of these
+        // topics in depth later.
 
 
-        System.out.println("────── Java's Biggest Mistake (Maybe) ──────");
+        System.out.println("────── A Java Footgun ──────");
 
         // What will this code print? Why? Run it. Study it.
 
@@ -128,7 +130,7 @@ public class ObjectTypes {
         // The slightly long version: Java makes a distinction between “the same string” and
         // “different strings that happen to contain the same characters.”  In Java, the == operator
         // checks where two strings are the same string. If you want to check whether two strings
-        // have identical characters, you use the method name `equals` (uncomment and try it):
+        // have identical characters, you use the method name `equals`. Uncomment and try this:
 
         // if (mascotTwice.equals(happyBaby)) {
         //     System.out.println("The strings are equal.");
@@ -138,12 +140,19 @@ public class ObjectTypes {
 
         // In most languages, == means what .equals() means in Java. This has caused innumerable
         // programmers immense confusion over the last ~3 decades. Many people (including the
-        // author of this reading) think that was a mistake. But it’s a mistake Java can’t fix now,
+        // author of this reading) think that was a mistake. There is a good rationale for it
+        // working this way, and it is _perfectly logically consistent_ if you know the language
+        // well. But it is also a surprise, and in programming, we mostly don’t like surprises.
+        //
+        // This is what engineers sometimes call a “footgun:” a thing that makes it easy to make
+        // mistakes, like a gun that makes it easy to accidentally shoot yourself in the foot.
+        //
+        // Java’s maintainers might want to rethink this. But it’s a mistake Java _can’t_ fix now,
         // because changing it would change the meaning of millions -- maybe billions? -- of lines
-        // of existing code out there in the world.
+        // of existing Java code out there in the world.
         //
         // Every language, every programming tool, has mistakes. Part of a developer’s job is
-        // learning them and learning how to either work around them or live with them. This, too,
+        // learning them, and learning how to either work around them or live with them. This, too,
         // is part of the experience of learning a new programming language!
     }
 }
