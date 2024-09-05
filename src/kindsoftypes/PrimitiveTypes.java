@@ -96,6 +96,8 @@ public class PrimitiveTypes {
         System.out.println("Max int plus 1:   " + (Integer.MAX_VALUE + 1));
         System.out.println("Min int minus 1:  " + (Integer.MIN_VALUE - 1));
 
+        // (For those who know the term from math class, Java ints use _modular arithmetic_.)
+
         // This raises several questions:
         //
         // 1. Why?!??
@@ -124,7 +126,7 @@ public class PrimitiveTypes {
         // range. Watch out for that. 🚨🚨
 
 
-        System.out.println("────── Other primitive Types ──────");
+        System.out.println("────── Integers Big and Small ──────");
 
         // Because of this problem of limited range, Java offers us a little menu of integer types.
         // Up above, find this line:
@@ -142,6 +144,46 @@ public class PrimitiveTypes {
         // Finally, try changing the type to `long`. What happens then? Does that mean that `long`
         // has no maximum, like Python integers? (How could you explore that question? How could you
         // find out for sure?)
+        
+        // What happens if you try to stuff a bigger type inside a smaller one? Guess what this
+        // code will do, then uncomment it and try it:
+
+        // int thousand = 1000;
+        // short thousandShort = thousand;
+
+        // Study that error message (starts with “Type mismatch”). What exactly is Java saying?
+        // Two questions:
+        //
+        // 1. Why is it useful for Java to say that?
+        // 2. But what if we need to assign an int value to a short variable?
+
+        // The answer to question 1: Java doesn't want our code to surprise us; it wants us to stop
+        // and think. What if the int value doesn't fit in a short? Is that OK? Should it be an
+        // error? Should it wrap around?
+        //
+        // Java gives us a way to say, “Yes! I thought about it! Force it to happen!” It is called
+        // _type casting_. “Casting” means “please force this value of one type to be a different
+        // type, yes, I really mean that, please do it if you can.” The syntax is:
+        //
+        //    (SomeOtherType) someValue
+        //
+        // ...and that means “please take someValue and convert its type to SomeOtherType.”
+        //
+        // That solves our problem from above:
+
+        int thousand = 1000;
+        short thousandShort = (short) thousand;  // Here is the type cast
+        System.out.println(thousandShort);
+
+        // What happens if you do a type cast but the number is too big to fit in the new type, i.e.
+        // it overflows? Run this code and see:
+
+        System.out.println("A pretty big int: " + 123456789);
+        System.out.println("...cast to short: " + (short) 123456789);
+        System.out.println("...cast to byte:  " + (byte) 123456789);
+
+
+        System.out.println("────── Beyond Integers ──────");
 
         // All these types -- byte, short, int, and long -- are called _primitive types_. Primitive
         // types have several features in common in Java:
