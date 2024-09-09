@@ -42,8 +42,8 @@ public class ObjectTypes {
         //     mascot.length()
         //
         // You may have seen this dot syntax before. If so, we’re asking you to pay closer attention
-        // to it than you might have in the past. If not, you will have seen function calls of some
-        // kind -- code like `someFunction(x, y)` -- and method calls are a lot like that, except
+        // to it than you might have in the past. If not, you have at least seen function calls
+        // before -- code like `someFunction(x, y)` -- and method calls are a lot like that, except
         // they use that dot syntax that also gives them a receiver.
         
         // Here’s what’s interesting about methods: they are specific to the _type of the receiver_.

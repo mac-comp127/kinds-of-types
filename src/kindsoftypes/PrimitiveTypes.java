@@ -83,7 +83,7 @@ public class PrimitiveTypes {
         // x *= 100;
         // System.out.println("x=" + x);
 
-        // wat?!
+        // wat?! (This is programmer slang for “what??” but with extra disbelief.)
         //
         // Here’s what’s going on:
         //
@@ -207,7 +207,7 @@ public class PrimitiveTypes {
         // All these types -- byte, short, int, and long -- are called _primitive types_. Primitive
         // types have several features in common in Java:
         //
-        // - The have a fixed range of values (and take a fixed amount of memory in the computer).
+        // - They have a fixed range of values (and take a fixed amount of memory in the computer).
         // - You work with them using operators (+ - * / etc).
         // - They allow for very fast computation.
         //
@@ -215,9 +215,9 @@ public class PrimitiveTypes {
         // floating point numeric types. Remember that floating point means (1) fractions allowed,
         // and (2) all results are approximations. The difference between float and double is how
         // precise the approximations are. On a modern computer, most of the time you should just
-        // use double. The main reasons to use float are (1) something forces you to in a certain
-        // context, or (2) you are storing a large quantity of numbers, and you are concerned about
-        // being efficient with memory.
+        // use double. The main reasons to use float are (1) other existing code requires it, or
+        // (2) you are storing a large quantity of numbers, and you are concerned about being
+        // efficient with memory.
         //
         // There is a primitive type `char` that represents just one character of a string. In Java
         // (but not in every language), char literals use single quotes and string literals use
