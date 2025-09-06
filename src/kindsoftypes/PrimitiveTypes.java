@@ -41,7 +41,7 @@ public class PrimitiveTypes {
         personCount = personCount + 1;
         personCount += 1;  // same thing
         ++personCount;     // same thing
-        personCount++;     // same thing (almost; see bonus challenge in next class activity)
+        personCount++;     // same thing (almost; see bonus challenge in ASTs class activity)
 
         // (Python doesn’t have ++, but many other languages do, most notable the C programming
         // language. You may have heard of the programming language C++, and now yet get the nerdy
@@ -52,7 +52,7 @@ public class PrimitiveTypes {
         personCount = personCount - 1;
         personCount -= 1;  // same thing
         --personCount;     // same thing
-        personCount--;     // same thing (almost; see bonus challenge in next class activity)
+        personCount--;     // same thing (almost; see bonus challenge in ASTs class activity)
 
         // Let's use one of those shortcuts to have a little head-exploding fun.
 
