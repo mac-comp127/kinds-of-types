@@ -96,9 +96,8 @@ public class PrimitiveTypes {
         // When Java does arithmetic with integers, it does _modular arithmetic_: if a result goes
         // off one end of that range between min and max -- if it “overflows” -- then Java makes the
         // result “wrap around” to the other end of the range. (It works a lot like doing arithmetic
-        // on a clock, where 10 + 3 = 1. For those who know the term from math class, Java ints use
-        // _modular arithmetic_.) When you add 1 to the max int, it wraps around to the min int, and
-        // vice versa when subtracting:
+        // on a clock, where 10 + 3 = 1.) When you add 1 to the max int, it wraps around to the min
+        // int, and vice versa when subtracting:
 
         System.out.println("Max int plus 1:   " + (Integer.MAX_VALUE + 1));
         System.out.println("Min int minus 1:  " + (Integer.MIN_VALUE - 1));
