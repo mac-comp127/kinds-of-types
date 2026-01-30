@@ -92,7 +92,7 @@ public class ObjectTypes {
         // building blocks show up in many other languages too.)
         //
         // The fundamental difference is that primitives are the basic building blocks, kind of like
-        // the atoms of data in Java, whereas object types are make by combining things.
+        // the atoms of data in Java, whereas object types are made by combining things.
         //
         // Beyond that big idea, there are many specific differences in Java between these two kinds
         // of types:
